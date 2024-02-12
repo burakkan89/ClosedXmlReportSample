@@ -1,0 +1,132 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\tekstil-proje-burak\\miniexcel\\ClosedXml\\SampleClosedXml\\SampleClosedXml\\SampleClosedXml\\SampleClosedXml.csproj": {}
+  },
+  "projects": {
+    "D:\\tekstil-proje-burak\\miniexcel\\ClosedXml\\SampleClosedXml\\SampleClosedXml\\ClosedXml.CORE\\ClosedXml.CORE.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\tekstil-proje-burak\\miniexcel\\ClosedXml\\SampleClosedXml\\SampleClosedXml\\ClosedXml.CORE\\ClosedXml.CORE.csproj",
+        "projectName": "ClosedXml.CORE",
+        "projectPath": "D:\\tekstil-proje-burak\\miniexcel\\ClosedXml\\SampleClosedXml\\SampleClosedXml\\ClosedXml.CORE\\ClosedXml.CORE.csproj",
+        "packagesPath": "C:\\Users\\Master\\.nuget\\packages\\",
+        "outputPath": "D:\\tekstil-proje-burak\\miniexcel\\ClosedXml\\SampleClosedXml\\SampleClosedXml\\ClosedXml.CORE\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Master\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "ClosedXML.Report": {
+              "target": "Package",
+              "version": "[0.2.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\tekstil-proje-burak\\miniexcel\\ClosedXml\\SampleClosedXml\\SampleClosedXml\\SampleClosedXml\\SampleClosedXml.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\tekstil-proje-burak\\miniexcel\\ClosedXml\\SampleClosedXml\\SampleClosedXml\\SampleClosedXml\\SampleClosedXml.csproj",
+        "projectName": "SampleClosedXml",
+        "projectPath": "D:\\tekstil-proje-burak\\miniexcel\\ClosedXml\\SampleClosedXml\\SampleClosedXml\\SampleClosedXml\\SampleClosedXml.csproj",
+        "packagesPath": "C:\\Users\\Master\\.nuget\\packages\\",
+        "outputPath": "D:\\tekstil-proje-burak\\miniexcel\\ClosedXml\\SampleClosedXml\\SampleClosedXml\\SampleClosedXml\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Master\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\tekstil-proje-burak\\miniexcel\\ClosedXml\\SampleClosedXml\\SampleClosedXml\\ClosedXml.CORE\\ClosedXml.CORE.csproj": {
+                "projectPath": "D:\\tekstil-proje-burak\\miniexcel\\ClosedXml\\SampleClosedXml\\SampleClosedXml\\ClosedXml.CORE\\ClosedXml.CORE.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
