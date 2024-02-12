@@ -1,4 +1,5 @@
-﻿using ClosedXML.Report;
+﻿using ClosedXML.Excel;
+using ClosedXML.Report;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,16 +10,28 @@ namespace ClosedXml.CORE
 {
     public class CreateExcel : ITemplateExcel
     {
-        public string CreateExcelWithTemplate(string TemplatePath, string TemlateName, string nameManager, dynamic[] model, string outputPath)
+        public string CreateExcelWithTemplate(string TemplatePath, string TemlateName, string nameManager, List<List<dynamic>> model, string outputPath)
         {
-            var template = new XLTemplate(TemplatePath + TemlateName);
+            var workbook = new XLWorkbook();
 
-            template.AddVariable(nameManager, model);
 
-            template.Generate();
+            int value = 1;
+            for (int i = 0; i < model.Count; i++)
+            {
+
+                var template = new XLTemplate(TemplatePath + TemlateName); // loading same template again
+
+                template.AddVariable(nameManager, model[i]);
+                template.Generate();
+                
+                template.Workbook.Worksheet(1).CopyTo(workbook, "Sheet_"+  value.ToString());
+         
+                value++;
+
+            }
             string outputFile = outputPath + Guid.NewGuid().ToString() + ".xlsx";
 
-            template.SaveAs(outputFile);
+            workbook.SaveAs(outputFile);
 
             return outputFile;
         }
