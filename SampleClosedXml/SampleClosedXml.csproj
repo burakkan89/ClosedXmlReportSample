@@ -12,6 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Templates\DynamicExcel.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Templates\mali_Template.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

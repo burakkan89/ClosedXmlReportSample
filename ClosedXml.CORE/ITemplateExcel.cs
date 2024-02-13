@@ -8,6 +8,8 @@ namespace ClosedXml.CORE
 {
     public interface ITemplateExcel
     {
-     public string CreateExcelWithTemplate(string TemplatePath, string TemlateName, string nameManager , List<List<dynamic>> model, string outputPath);
-}
+     public string CreateExcelWithTemplate(string TemplatePath, string TemplateName, string nameManager , List<List<dynamic>> model, string outputPath);
+
+     public string CreateExcelWithTemplateWithoutNm(string TemplatePath, string TemplateName, List<dynamic> model, string outputPath);
+    }
 }

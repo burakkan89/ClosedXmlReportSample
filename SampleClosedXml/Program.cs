@@ -51,8 +51,49 @@ List<List<dynamic>> objectList = new List<List<dynamic>>();
 objectList.Add(visitors);
 objectList.Add(visitors2);
 
+List<string> resultList = new List<string>();
+
 ITemplateExcel excel = new CreateExcel();
-var result = excel.CreateExcelWithTemplate(TemplatePath, "mali_Template.xlsx", "maliDeneme", objectList, Outputpath);
+resultList.Add(excel.CreateExcelWithTemplate(TemplatePath, "mali_Template", "maliDeneme", objectList, Outputpath));
 
 
-Console.WriteLine(result);
+
+
+var objectN = new
+{
+    Description = "Kişi Genel Bilgi",
+    DynamicHeader = new[] { "Evlilik Durumu", "Askerlik" },
+    Data = new List<dynamic> {
+                        new { Name = "Naci Yılma<", Age =20,  Values = new[] {"Bekar","Yok"} ,Job ="Asker"  },
+                        new { Name = "Kemalettin Cindoruk",Age =25,  Values = new[]{"Bekar","Yok"} ,Job ="Memur" },
+                        new { Name = "Hasan Şaş",Age =30,  Values = new[]{"Bekar","Yok"},Job ="Futbolcu"  },
+                        new { Name = "Altay",Age =35, Values = new[]{"Bekar","Yok" },Job ="Şarkıcı" } 
+       }
+};
+
+var objectS = new
+{
+    Description = "Kişi Özel Bilgi",
+    DynamicHeader = new[] { "Evlilik Durumu", "Askerlik" },
+    Data = new List<dynamic> {
+                        new { Name = "Ali Duru", Age =20,  Values = new[] {"Bekar","Yok"} ,Job ="Aşçı" },
+                        new { Name = "Veli Cindoruk",Age =25,  Values = new[]{"Bekar","Yok"} ,Job ="Serbest Meslek" },
+                        new { Name = "İlhan Mansız",Age =30,  Values = new[]{"Bekar","Yok"} ,Job ="Topçu" },
+                        new { Name = "Şakira",Age =35, Values = new[]{"Bekar","Yok" } ,Job ="Popçu"}
+       }
+};
+
+List<dynamic> dynamicList = new List<dynamic>();
+dynamicList.Add(objectN);
+dynamicList.Add(objectS);
+
+
+resultList.Add(excel.CreateExcelWithTemplateWithoutNm(TemplatePath, "DynamicExcel", dynamicList, Outputpath));
+
+foreach (var item in resultList)
+{
+    Console.WriteLine(item);
+}
+
+
+Console.ReadLine();
